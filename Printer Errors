@@ -1,0 +1,15 @@
+function printerError(s) {
+  let goodAlphabetCodes = [];
+
+  for (let i = 'a'.charCodeAt(0); i <= 'm'.charCodeAt(0); i++) {
+    goodAlphabetCodes.push(i);
+  }
+  let badChar = 0, i;
+  for (i = 0; i < s.length; i++){
+    if (!goodAlphabetCodes.includes(s[i].charCodeAt(0))){
+      badChar ++;
+    }
+  }
+  let result = badChar.toString() + "/" + i.toString();
+  return result;
+}
