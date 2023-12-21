@@ -1,0 +1,16 @@
+//Find the odd int
+function findOdd(A) {
+  let countMap = {};
+  
+  for (let i = 0; i < A.length; i++) {
+    let num = A[i];
+    countMap[num] = (countMap[num] || 0) + 1;
+  }
+  for (let key in countMap) {
+    if (countMap[key] % 2 !== 0) {
+      return parseInt(key, 10);
+    }
+  }
+  return 0;
+}
+console.log(findOdd([7]));
