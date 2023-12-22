@@ -1,0 +1,22 @@
+function solution(str){
+  let result = [];
+  let j = 0;
+  if (str.length % 2 == 0){
+     for (let i = 0; i < str.length; i+=2){
+       result[j] = str[i] + str [i+1];
+       j++;
+     }
+   }
+   else{
+     for (let i = 0; i < str.length; i+=2){
+       if (i == str.length-1){
+         result[j] = str[i] + "_";
+       }
+       else{
+         result[j] = str[i] + str [i+1];
+       }
+       j++;
+     }
+   }
+  return result;
+}
