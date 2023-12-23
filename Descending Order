@@ -1,0 +1,8 @@
+function descendingOrder(n){
+  if (n < 0){
+    return 0;
+  }
+  const sortedDigits = String(n).split('').sort((a, b) => b - a);
+  const result = parseInt(sortedDigits.join(''), 10);
+  return result;
+}
