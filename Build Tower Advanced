@@ -1,0 +1,16 @@
+function towerBuilder(nFloors, nBlockSz) {
+  const [blockWidth, blockHeight] = nBlockSz;
+  const tower = [];
+
+  for (let floor = 0; floor < nFloors; floor++) {
+    const spaces = ' '.repeat((nFloors - floor - 1) * blockWidth);
+    const stars = '*'.repeat((2 * floor + 1) * blockWidth);
+
+    for (let i = 0; i < blockHeight; i++) {
+      const row = spaces + stars + spaces;
+      tower.push(row);
+    }
+  }
+
+  return tower;
+}
