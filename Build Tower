@@ -1,0 +1,10 @@
+function towerBuilder(nFloors) {
+  let result = [];
+  for (let i = 0; i < nFloors; i++){
+    const spaces = ' '.repeat(nFloors - i - 1);
+    const stars = '*'.repeat(2*i + 1);
+    const floor = spaces + stars + spaces;
+    result.push(floor);
+  }
+  return result
+}
