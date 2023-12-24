@@ -1,0 +1,12 @@
+function findMissingLetter(array)
+{
+  let expectedCharCode = array[0].charCodeAt(0);
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].charCodeAt(0) !== expectedCharCode) {
+      return String.fromCharCode(expectedCharCode);
+    }
+    expectedCharCode++;
+  }
+  return ' ';
+}
